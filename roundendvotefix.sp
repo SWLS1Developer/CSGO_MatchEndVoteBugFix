@@ -11,8 +11,7 @@ public void OnPluginStart()
 public void OnMapStart()
 {
     RoundCount = 0;
- 
-	CV_MaxRound = FindConVar("mp_maxrounds");
+    CV_MaxRound = FindConVar("mp_maxrounds");
 }
 
 public Action Event_RoundEnd(Event event, const char[] name, bool dontBroadcast)
@@ -22,7 +21,7 @@ public Action Event_RoundEnd(Event event, const char[] name, bool dontBroadcast)
     {
         ServerCommand("mp_restartgame 1");
         RoundCount = 0;
-        }
+    }
     
     return Plugin_Continue; 
 } 
